@@ -31,3 +31,8 @@ WanderLust is a web application designed to help users list and explore various 
    ```bash
    cd WanderLust
    npm install
+   
+3. Start MongoDB and run the server
+   ```bash
+   mogosh
+   node app.js
