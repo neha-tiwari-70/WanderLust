@@ -1,0 +1,34 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3 style="margin: 2rem; padding-top: 1rem;">All Listings</h3>
+    <!-- <form method="GET" action="/listings/new">
+        <button>New Listing</button>
+    </form> commented out the code after creating the All New Listing option in navbar -->
+    <ul>
+
+<!-- creating cards to display the listing with help of bootstrap -->
+ <!-- to put 3 cards in a row we do it row -->
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">   
+    <%for(let listing of allListing){ %>
+        <!-- and to make the whole card clickable and move to show.ejs we put it into anchor tag -->
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card col"> 
+          <div class="card-img-overlay"></div>
+          <!-- to make our image height same we gave it a style of height of 20rem -->
+            <img src="<%= listing.image %>" class="card-img-top" alt="listing-img" style="height: 20rem;">
+            <div class="card-body">
+              <p class="card-text">
+                <b><%= listing.title %><br></b>
+                &#8377;<%= listing.price.toLocaleString("en-IN") %>
+              </p>
+            </div>
+          </div>
+        </a>
+          <%}%>
+</div>
+
+</ul>
+</body>
+
+
