@@ -26,3 +26,8 @@ WanderLust is a web application designed to help users list and explore various 
 1. Clone the repository:
    ```bash
    git clone https://github.com/neha-tiwari-70/WanderLust.git
+
+2. Navigate to the project folder and install dependencies:
+   ```bash
+   cd WanderLust
+   npm install
